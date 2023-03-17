@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
+// hello this is first commit test
 namespace ebook_store.Controllers
 {
     public class HomeController : Controller
@@ -17,6 +18,7 @@ namespace ebook_store.Controllers
         {
             return View();
         }
+
         public IActionResult BookDetails()
         {
             return View();
