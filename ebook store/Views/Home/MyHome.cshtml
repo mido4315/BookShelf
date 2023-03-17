@@ -1,0 +1,85 @@
+﻿@{
+	ViewData["Title"] = "Home Page";
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Green Product Cards</title>
+    <style>
+        body {
+            background-color: #f1f1f1;
+            font-family: Arial, sans-serif;
+        }
+
+        .product-card {
+            display: inline-block;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            margin: 10px;
+            width: 200px;
+            text-align: center;
+        }
+
+            .product-card img {
+                width: 100%;
+                height: 150px;
+                object-fit: cover;
+                border-radius: 5px 5px 0 0;
+            }
+
+            .product-card h2 {
+                font-size: 16px;
+                margin: 10px;
+                color: #008000;
+            }
+
+            .product-card p {
+                font-size: 12px;
+                margin: 10px;
+                color: #333;
+                height: 60px;
+                overflow: hidden;
+            }
+
+            .product-card button {
+                background-color: #008000;
+                color: #fff;
+                border: none;
+                padding: 10px;
+                border-radius: 5px;
+                margin: 10px;
+                cursor: pointer;
+            }
+
+                .product-card button:hover {
+                    background-color: #005000;
+                }
+    </style>
+</head>
+<body>
+    <div class="product-card">
+        <img src="https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/619HTmC8gIL._AC_UF1000,1000_QL80_.jpg" alt="Book 1">
+        <h2>Coding Interviews</h2>
+        <p>A comprehensive book on programming interviews with questions, and solutions.</p>
+        <button onclick="location.href='@Url.Action("BookDetails", "Home")'">Open Book</button>
+    </div>
+
+    <div class="product-card">
+        <img src="https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/51I1iu7LvQL._AC_UF1000,1000_QL80_.jpg" alt="Book 2">
+        <h2>Head First Python</h2>
+        <p>A project-based introduction to programming with Python.</p>
+        <button>Open Book</button>
+    </div>
+
+    <div class="product-card">
+        <img src="data:image/jpeg;base64,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" alt="Book 3">
+        <h2>Clean Code</h2>
+        <p>A classic book on software craftsmanship and clean coding practices.</p>
+        <button>Open Book</button>
+    </div>
+</body>
+</html>
